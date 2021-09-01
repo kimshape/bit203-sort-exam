@@ -1,0 +1,37 @@
+  
+  1. Arrays.sort() 배열 정렬시 사용한다
+
+  * Object Array에서는 TimSort(Merge Sort + Insertion Sort)를 사용
+    Ex)String [], AA [] 등 
+
+  * Primitive Array에서는  QuickSort(Quick Sort + Insertion Sort)를 사용
+    Ex)int [] , char[] 등 
+
+
+
+2. java.util.Collections.sort()
+
+   Collection적인 클래스의 정렬에 사용
+
+   Ex) ArrayList, LinkedList 등 
+
+
+3. 개발자가 만든 객체자료형의 sort시 Collections.sort()를 사용하고 싶다면
+  
+   접 class  클명  implements Comparable<클명>{
+    @Override
+	public int compareTo(클명 o) {
+	    이 메소드를 구현 해 놓아야 한다.
+	  return  수치멤버 - o.수치멤버 ; 
+	  또는 return  객체자료형멤버.compareTo(o.객체자료형멤버) ;
+	  이런식으로 구현해주면 된다.
+	}
+   }   
+
+  Collections.sort( 클명의 리스트 주소    )  ==> compareTo()가 자동으로 호출됨
+  
+  
+  
+  
+  
+  
